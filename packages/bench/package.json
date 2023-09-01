@@ -1,0 +1,25 @@
+{
+  "name": "bench",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "watch": "rimraf dist && vite build --watch",
+    "bench.traces.crdt-libs": "node ./dist/bench.traces.crdt-libs.js",
+    "bench.traces.non-crdt-libs": "node ./dist/bench.traces.non-crdt-libs.js"
+  },
+  "devDependencies": {
+    "@types/node": "20.5.7",
+    "vite-plugin-wasm": "^3.2.2"
+  },
+  "dependencies": {
+    "@automerge/automerge": "2.0.3",
+    "diamond-types-node": "1.0.2",
+    "editing-traces": "https://github.com/josephg/editing-traces#3caad3dcce0043ef925d588d4788dbcddececbd8",
+    "json-joy": "^9.5.1",
+    "rope.js": "0.1.0",
+    "yjs": "13.6.7",
+    "ywasm": "0.16.10"
+  }
+}
